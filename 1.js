@@ -16,4 +16,4 @@ console.log(`I'm from ${country} It's located in sub-continent ${continent} It's
 //Data Types
 let isIsland = false;
 let language;
-console.log(typeof country, typeof isIsland, typeof language, typeof population);
+console.log(typeof country, typeof isIsland, typeof language, typeof population, typeof null);
