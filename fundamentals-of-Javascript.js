@@ -26,7 +26,8 @@ console.log(typeof country, typeof isIsland, typeof language, typeof pakistan.po
 //operators
 
 let halfCountry = pakistan.population / 2 ;
-console.log(halfCountry + 1 );
+halfCountry ++;
+console.log(halfCountry);
 
 const finlandPopulation = 6;
 console.log(pakistan.population > finlandPopulation);
