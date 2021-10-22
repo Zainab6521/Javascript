@@ -8,9 +8,14 @@ if (js === "amazing"){
 let country = "Pakistan";
 let continent = "ASIA";
 let rank = "4th"
-let population = 229.0 ;
-
-console.log(`I'm from ${country} It's located in sub-continent ${continent} It's the World's ${rank} Most Populous country With the Population of almost ${population} millions population`)
+// let population = 229.0 ;
+//Objects
+let pakistan = {
+    capital : "islamabad",
+    province: 5,
+    population : 229.0
+}
+console.log(`I'm from ${country} It's located in sub-continent ${continent} It's the World's ${rank} Most Populous country With the Population of almost ${pakistan.population} millions population`)
 
 
 //Data Types
