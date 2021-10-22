@@ -6,7 +6,7 @@ if (js === "amazing"){
 }
 
 let country = "Pakistan";
-let continent = "ASIA";
+const continent = "ASIA";
 let rank = "4th"
 // let population = 229.0 ;
 //Objects
@@ -20,5 +20,22 @@ console.log(`I'm from ${country} It's located in sub-continent ${continent} It's
 
 //Data Types
 let isIsland = false;
-let language;
-console.log(typeof country, typeof isIsland, typeof language, typeof population, typeof null);
+const language = "URDU";
+console.log(typeof country, typeof isIsland, typeof language, typeof pakistan.population, typeof null);
+
+//operators
+
+let halfCountry = pakistan.population / 2 ;
+console.log(halfCountry + 1 );
+
+const finlandPopulation = 6;
+console.log(pakistan.population > finlandPopulation);
+
+if (pakistan.population > finlandPopulation) {
+    console.log("My country has more population than Finland")
+}else{
+    console.log("Finland has more population than My country")
+}
+var description = "Portugal is in Europe, and its 11 million people speak portuguese";
+const avgPopulation = 33;
+console.log(`${avgPopulation} million is an average population in a country but my country has ${pakistan.population} Million people. BTW ${description}`)
