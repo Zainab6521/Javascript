@@ -40,3 +40,14 @@ if (pakistan.population > finlandPopulation) {
 var description = "Portugal is in Europe, and its 11 million people speak portuguese";
 const avgPopulation = 33;
 console.log(`${avgPopulation} million is an average population in a country but my country has ${pakistan.population} Million people. BTW ${description}`)
+
+//find behavior of operators from operator precedence table
+
+let x,y;
+x= y = 25-10-2;
+// y=15;
+// console.log(`${x} is same as ${y}`)
+
+if(x === y ? console.log(`${x} is same as ${y}`) : console.log(`${x} is different from ${y}`)){
+    console.log("Hello")
+}
