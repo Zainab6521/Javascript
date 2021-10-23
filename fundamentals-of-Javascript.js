@@ -152,3 +152,20 @@ if(language === 'urdu' && isIsland === false && pakistan.population <= 50){
 
  //Ternary operator
 console.log(`${country}'s' population is ${pakistan.population>32 ? "above": "below"} average!!`);
+
+//challenge #3
+const Dolphins = (96 + 108 + 110) / 3;
+const Koalas = (88 + 91 + 110) / 3;
+console.log("Dolphins" ,Dolphins , "Koalas",Koalas)
+const minScore = 100;
+if (Dolphins> Koalas && Dolphins >= minScore) {
+    console.log ("Dolphins Win")
+} else if ( Koalas > Dolphins && Koalas >= minScore){
+    console.log("koalas win")
+}else if ( Dolphins === Koalas && Dolphins >= minScore && Koalas >= minScore) {
+    console.log("SAME SCORE")
+}
+else {
+    console.log("No one win Today")
+}
+
