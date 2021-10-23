@@ -15,6 +15,7 @@ let pakistan = {
     province: 5,
     population : 229.0
 }
+
 console.log(`I'm from ${country} It's located in sub-continent ${continent} It's the World's ${rank} Most Populous country With the Population of almost ${pakistan.population} millions population`)
 
 
@@ -41,6 +42,12 @@ var description = "Portugal is in Europe, and its 11 million people speak portug
 const avgPopulation = 33;
 console.log(`${avgPopulation} million is an average population in a country but my country has ${pakistan.population} Million people. BTW ${description}`)
 
+//Assignment
+if(pakistan.population >= avgPopulation){
+    console.log("Portugal's population is above average")
+}else{
+    console.log("Portugal's population is 22 million below average")
+}
 //find behavior of operators from operator precedence table
 
 let x,y;
@@ -62,20 +69,18 @@ const markBMI = markMass / markHeight ** 2;
 const johnMass = 92;
 const johnHeight = 1.95;
 const johnBMI = johnMass / johnHeight ** 2;
+markHigherBMI = markBMI > johnBMI ;
+console.log("markBMI",markBMI)
+console.log("johnBMI" ,johnBMI)
 
-console.log("markBMI",markBMI , "johnBMI" ,johnBMI)
+if(markHigherBMI = true ? console.log(`mark's BMI (${markBMI}) is greater than John's BMI (${johnBMI})`): console.log(`John's BMI (${johnBMI}) is greater than mark's BMI (${markBMI})`));
 
-console.log("In first case markHigherBMI:",markHigherBMI = markBMI > johnBMI );
+//conversion and coercion
+console.log('9' - '5');
+console.log('19' - '13' + '17');
+console.log('19' - '13' + 17);
+console.log('123' < 57);
+console.log(5 + 6 + '4' + 9 - 4 - 2)
 
-// //SecondCase
-// const markMass1 = 95;
-// const markHeight1 = 1.88;
-// const markBMI1 = markMass1 / markHeight1 ** 2;
-
-// const johnMass1 = 858;
-// const johnHeight1 = 1.76;
-// const johnBMI1 = johnMass1 / johnHeight1 ** 2;
-
-// console.log("markBMI",markBMI1 , "johnBMI" ,johnBMI1)
-
-// console.log("In second case markHigherBMI:",markHigherBMI = markBMI1 > johnBMI1 );
+let n = "21";
+console.log(Number(n),n)
