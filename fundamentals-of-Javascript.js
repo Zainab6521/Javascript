@@ -13,7 +13,7 @@ let rank = "4th";
 let pakistan = {
   capital: "islamabad",
   province: 5,
-  population: 22.0,
+  population: 229.0,
 };
 
 console.log(
@@ -149,3 +149,6 @@ if(language === 'urdu' && isIsland === false && pakistan.population <= 50){
     default:
         console.log("Great language too :D")
  }
+
+ //Ternary operator
+console.log(`${pakistan.population > 32 ? "Portugal's population is above average" : "Portugal's population is below average"}`)
