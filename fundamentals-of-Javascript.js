@@ -49,5 +49,33 @@ x= y = 25-10-2;
 // console.log(`${x} is same as ${y}`)
 
 if(x === y ? console.log(`${x} is same as ${y}`) : console.log(`${x} is different from ${y}`)){
-    console.log("Hello")
 }
+
+//Coding Challenge # 1
+
+//BMI = mass / height ** 2;
+//FirstCase
+const markMass = 78;
+const markHeight = 1.69;
+const markBMI = markMass / markHeight ** 2;
+
+const johnMass = 92;
+const johnHeight = 1.95;
+const johnBMI = johnMass / johnHeight ** 2;
+
+console.log("markBMI",markBMI , "johnBMI" ,johnBMI)
+
+console.log("In first case markHigherBMI:",markHigherBMI = markBMI > johnBMI );
+
+// //SecondCase
+// const markMass1 = 95;
+// const markHeight1 = 1.88;
+// const markBMI1 = markMass1 / markHeight1 ** 2;
+
+// const johnMass1 = 858;
+// const johnHeight1 = 1.76;
+// const johnBMI1 = johnMass1 / johnHeight1 ** 2;
+
+// console.log("markBMI",markBMI1 , "johnBMI" ,johnBMI1)
+
+// console.log("In second case markHigherBMI:",markHigherBMI = markBMI1 > johnBMI1 );
