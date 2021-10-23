@@ -124,9 +124,9 @@ console.log(Number(n), n);
 //logical operators
 
 if(language === 'urdu' && isIsland === false && pakistan.population <= 50){
-    console.log("You should live in Portugal :)")
+    console.log(`You should live in ${country} :)`)
 }else{
-    console.log("Portugal does not meet your criteria :(")
+    console.log(`${country} does not meet your criteria :(`)
 }
 
 //switch statements
@@ -151,4 +151,4 @@ if(language === 'urdu' && isIsland === false && pakistan.population <= 50){
  }
 
  //Ternary operator
-console.log(`${pakistan.population > 32 ? "Portugal's population is above average" : "Portugal's population is below average"}`)
+console.log(`${country}'s' population is ${pakistan.population>32 ? "above": "below"} average!!`);
