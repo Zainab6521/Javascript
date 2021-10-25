@@ -29,7 +29,7 @@ function percentageOfWorld1(population){
 const chinaPop = percentageOfWorld1(1441);
 const pakPop = percentageOfWorld1(229.0);
 const singaporePop =  percentageOfWorld1(32.37);
-console.log(chinaPop,pakPop,singaporePop)
+console.log("With Functions Declarations -->",chinaPop,pakPop,singaporePop)
 
 
 //Functions Expressions
@@ -47,13 +47,13 @@ const chinaPop2 = percentageOfWorld2(1441);
 const pakPop2 = percentageOfWorld2(229.0)
 const singaporePop2 = percentageOfWorld2(32.37);
 
-console.log(chinaPop2,pakPop2,singaporePop2)
+console.log("With Function Expressions -->",chinaPop2,pakPop2,singaporePop2)
 
 //Arrow Functions
 //Example 1
 const calAge = birthYears => 2037 - birthYears;
 const age = calAge(1989);
-console.log("age", age)
+console.log("age -->", age)
 
 //Example 2
 const yearsUntilRetirement = (yearOfBirth, firstName) => {
@@ -64,3 +64,10 @@ const yearsUntilRetirement = (yearOfBirth, firstName) => {
 }
 console.log(yearsUntilRetirement(1985,"Mr Bert"))
 console.log(yearsUntilRetirement(2005, "Mr James"))
+
+//Example 3
+const percentageOfWorld3 = population3 => (population3 / 7990) * 100;
+const chinaPop3 = percentageOfWorld3(1441);
+const pakPop3 = percentageOfWorld3(299.0)
+const singaporePop3 = percentageOfWorld3(32.37);
+console.log("With Arrow functions -->",chinaPop3,pakPop3,singaporePop3)
