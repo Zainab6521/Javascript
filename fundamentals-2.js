@@ -50,6 +50,17 @@ const singaporePop2 = percentageOfWorld2(32.37);
 console.log(chinaPop2,pakPop2,singaporePop2)
 
 //Arrow Functions
+//Example 1
 const calAge = birthYears => 2037 - birthYears;
 const age = calAge(1989);
 console.log("age", age)
+
+//Example 2
+const yearsUntilRetirement = (yearOfBirth, firstName) => {
+    const age1 = 2037 - yearOfBirth;
+    const fullName = firstName;
+    const retirement = 60 - age1;
+    return `${fullName} is ${age1} years Old and has ${retirement} years left till his retirement.`
+}
+console.log(yearsUntilRetirement(1985,"Mr Bert"))
+console.log(yearsUntilRetirement(2005, "Mr James"))
