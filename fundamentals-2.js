@@ -71,3 +71,12 @@ const chinaPop3 = percentageOfWorld3(1441);
 const pakPop3 = percentageOfWorld3(299.0)
 const singaporePop3 = percentageOfWorld3(32.37);
 console.log("With Arrow functions -->",chinaPop3,pakPop3,singaporePop3)
+
+//Function within function
+const describePopulation = (country, population) =>{
+    const percPopulation = percentageOfWorld3(population)
+    return `${country} has ${population} million people. which is about ${percPopulation} % of the World.`
+}
+console.log(describePopulation("china", 1441))
+console.log(describePopulation("pakistan", 299.0))
+console.log(describePopulation("Singapore", 32.37))
