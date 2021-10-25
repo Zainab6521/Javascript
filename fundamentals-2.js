@@ -31,12 +31,13 @@ const pakPop = percentageOfWorld1(229.0);
 const singaporePop =  percentageOfWorld1(32.37);
 console.log(chinaPop,pakPop,singaporePop)
 
+
 //Functions Expressions
 //Example 1
-const findAge = function(age){
-    return 100- age;
+const findAge = function(birthYear){
+    return 2037 - birthYear;
 }
-console.log(findAge(2));
+console.log(findAge(1999));
 
 //Example 2
 const percentageOfWorld2 = function(population2){
@@ -47,3 +48,8 @@ const pakPop2 = percentageOfWorld2(229.0)
 const singaporePop2 = percentageOfWorld2(32.37);
 
 console.log(chinaPop2,pakPop2,singaporePop2)
+
+//Arrow Functions
+const calAge = birthYears => 2037 - birthYears;
+const age = calAge(1989);
+console.log("age", age)
