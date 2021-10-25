@@ -3,7 +3,7 @@
 //Function Declarations
 //Example#1
 function fruitprocessor(oranges, grapes){
-    console.log("oranges",oranges,"grapes",grapes);
+    // console.log("oranges",oranges,"grapes",grapes);
     const juice = `I'm making juice of ${ oranges} oranges and ${grapes} grapes.`
     return juice;
 }
@@ -21,4 +21,19 @@ const descPakistan = describeCountry("pakistan","229.0 million","Islamabad")
 const descChina = describeCountry("China", "1.402 billion", "beijing")
 const descSingapore = describeCountry("Singapore","32.37 million","Kuala Lumpur")
 console.log(descPakistan,descChina,descSingapore)
+
+//Example#3
+function percentageOfWorld1(population){
+    return (population / 7990) * 100;
+}
+const chinaPop = percentageOfWorld1(1441);
+const pakPop = percentageOfWorld1(229.0);
+const singaporePop =  percentageOfWorld1(32.37);
+console.log(chinaPop,pakPop,singaporePop)
+
+//Functions Expressions
+const findAge = function(age){
+    return 100- age;
+}
+console.log(findAge(2));
 
