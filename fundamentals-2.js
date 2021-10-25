@@ -80,3 +80,26 @@ const describePopulation = (country, population) =>{
 console.log(describePopulation("china", 1441))
 console.log(describePopulation("pakistan", 299.0))
 console.log(describePopulation("Singapore", 32.37))
+
+//coding challenge #1
+const calcAverage = (a,b,c) =>{
+    return (a + b + c) / 3;
+}
+function checkWinner(avgDolphins, avgKoalas){
+    if (avgDolphins >= 2* avgKoalas) {
+        console.log(`Dolphins Wins (${avgDolphins} VS ${avgKoalas}) !!`)
+    }else if (avgKoalas >= 2* avgDolphins){
+        console.log( `Koalas Wins (${avgKoalas} VS ${avgDolphins}) !!`)
+    }else{
+        console.log('No One Win Today!!')
+    }
+}
+//DATA 1
+// const scoreDolphins = calcAverage(44,23,71);
+// const scoreKoalas = calcAverage(65,54,49);
+
+//DATA 2
+const scoreDolphins = calcAverage(85,54,41);
+const scoreKoalas = calcAverage(23,34,27);
+
+checkWinner(scoreDolphins,scoreKoalas)
