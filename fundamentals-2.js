@@ -161,3 +161,38 @@ const tip = [calcTip(bills[0]),calcTip(bills[1]),calcTip(bills[2])]
 console.log(tip)
 const total = [bills[0]+tip[0],bills[0]+tip[0],bills[0]+tip[0]];
 console.log(total)
+
+//OBJECTS
+const mark = {
+    fullName : "mark", height : "1.69" , mass: "78"
+}
+const john = {
+    fullName : "john", height : "1.95" , mass: "92"
+}
+
+const myCountry = {
+    name : "Pakistan",
+    capital : "Islamabad",
+    language : "Urdu",
+    population : 229.0,
+    neighbours : 4,
+    province : 5
+}
+console.log(`${myCountry.name} has ${myCountry.population} million ${myCountry.language} -speaking people, ${myCountry.neighbours} neighbouring countries 
+and a capital called ${myCountry.capital}.`)
+
+myCountry.population += 2;
+myCountry["population"] -= 2;
+console.log(myCountry.population)
+
+const interestedIn = prompt("what do you want to know about my Country? Choose from name,capital,language,population,neighbour,province?")
+
+if(interestedIn[myCountry]){
+    console.log(interestedIn[myCountry])
+}else{
+    console.log('Wrong Request! Choose from name,capital,language,population,neighbour,province?')
+}
+
+myCountry.continent = "ASIA";
+myCountry["religion"] = "Islam";
+console.log(myCountry)
