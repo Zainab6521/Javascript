@@ -120,74 +120,80 @@ console.log(countries.length);
 console.log(countries[countries.length - 1]);
 
 //Exercise
-const year = [1990 , 1995 , 1999 , 1997];
+const year = [1990, 1995, 1999, 1997];
 const findAge1 = function (birthYear) {
   return 2037 - birthYear;
 };
-const age1 = findAge1(year[0])
-const age2 = findAge1(year[1])
-const age3 = findAge1(year[year.length - 1]) // for last element
+const age1 = findAge1(year[0]);
+const age2 = findAge1(year[1]);
+const age3 = findAge1(year[year.length - 1]); // for last element
 
-console.log("age1",age1,"age2",age2,"last",age3)
+console.log("age1", age1, "age2", age2, "last", age3);
 
-const ages = [findAge1(year[0]),findAge1(year[1]), findAge1(year[2]),findAge1(year[year.length -1])]
-console.log(ages)
+const ages = [
+  findAge1(year[0]),
+  findAge1(year[1]),
+  findAge1(year[2]),
+  findAge1(year[year.length - 1]),
+];
+console.log(ages);
 
 //Exercise
-const friends = ["a","b","c","d","e"]
+const friends = ["a", "b", "c", "d", "e"];
 //Add elements in Arrray
-const moreFriends = friends.push("f","g")
-friends.unshift("0")
+const moreFriends = friends.push("f", "g");
+friends.unshift("0");
 // console.log(friends)
-friends.shift()
+friends.shift();
 //Remove elements in Array
-const popped =friends.pop();
-console.log(popped,friends)
+const popped = friends.pop();
+console.log(popped, friends);
 
-console.log(friends.indexOf("c"),friends.includes("h"))
+console.log(friends.indexOf("c"), friends.includes("h"));
 
-if(friends.includes('d')){
-    console.log("The Friends have this friend.")
+if (friends.includes("d")) {
+  console.log("The Friends have this friend.");
 }
 
 //coding challenge #2
 
-const bills = [144, 555 ,44]
+const bills = [144, 555, 44];
 
-const calcTip = (billvalue) =>{
-    return billvalue >=50 && billvalue <=300 ? billvalue * 0.15 : billvalue * 0.20;
-}
-const tip = [calcTip(bills[0]),calcTip(bills[1]),calcTip(bills[2])]
-console.log(tip)
-const total = [bills[0]+tip[0],bills[0]+tip[0],bills[0]+tip[0]];
-console.log(total)
+const calcTip = (billvalue) => {
+  return billvalue >= 50 && billvalue <= 300
+    ? billvalue * 0.15
+    : billvalue * 0.2;
+};
+const tip = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
+console.log(tip);
+const total = [bills[0] + tip[0], bills[0] + tip[0], bills[0] + tip[0]];
+console.log(total);
 
 //OBJECTS
-const mark = {
-    fullName : "mark", height : "1.69" , mass: "78"
-}
-const john = {
-    fullName : "john", height : "1.95" , mass: "92"
-}
 
 const myCountry = {
-    name : "Pakistan",
-    capital : "Islamabad",
-    language : "Urdu",
-    population : 229.0,
-    neighbours : 4,
-    province : 5,
-    isIsland : false,
-    describe: function(){
-        console.log(`${this.name} has atleast ${this.population} million ${this.language} -speaking people, ${this.neighbours} neighbouring countries and a capital called ${this.capital}.`)
-    }
-}
-// console.log(`${myCountry.name} has ${myCountry.population} million ${myCountry.language} -speaking people, ${myCountry.neighbours} neighbouring countries 
+  name: "Pakistan",
+  capital: "Islamabad",
+  language: "Urdu",
+  population: 229.0,
+  neighbours: 4,
+  province: 5,
+  // isIsland : false,
+  describe: function () {
+    console.log(
+      `${this.name} has atleast ${this.population} million ${this.language} -speaking people, ${this.neighbours} neighbouring countries and a capital called ${this.capital}.`
+    );
+  },
+  checkIsland: function () {
+    this.isIsland = this.neighbours.length === 0 ? true : false;
+  },
+};
+// console.log(`${myCountry.name} has ${myCountry.population} million ${myCountry.language} -speaking people, ${myCountry.neighbours} neighbouring countries
 // and a capital called ${myCountry.capital}.`)
 
 myCountry.population += 2;
 myCountry["population"] -= 2;
-console.log(myCountry.population)
+console.log(myCountry.population);
 
 // const interestedIn = prompt("what do you want to know about my Country? Choose from name,capital,language,population,neighbour,province?")
 
@@ -199,5 +205,30 @@ console.log(myCountry.population)
 
 myCountry.continent = "ASIA";
 myCountry["religion"] = "Islam";
-console.log(myCountry.isIsland)
-console.log(myCountry.describe())
+console.log(myCountry.isIsland);
+console.log(myCountry.describe());
+
+//coding challenge 3
+const mark = {
+  fullName: "mark",
+  height: "1.69",
+  mass: "78",
+  calcBmi: function () {
+    this.bmi = this.mass / this.height ** 2;
+    return this.bmi;
+  },
+};
+const john = {
+  fullName: "john",
+  height: "1.95",
+  mass: "92",
+  calcBmi: function () {
+    this.bmi = this.mass / this.height ** 2;
+    return this.bmi;
+  },
+};
+
+mark.calcBmi();
+john.calcBmi();
+
+console.log("mark.bmi", mark.bmi, "john.bmi", john.bmi);
