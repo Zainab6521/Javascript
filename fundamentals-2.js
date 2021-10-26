@@ -176,23 +176,28 @@ const myCountry = {
     language : "Urdu",
     population : 229.0,
     neighbours : 4,
-    province : 5
+    province : 5,
+    isIsland : false,
+    describe: function(){
+        console.log(`${this.name} has atleast ${this.population} million ${this.language} -speaking people, ${this.neighbours} neighbouring countries and a capital called ${this.capital}.`)
+    }
 }
-console.log(`${myCountry.name} has ${myCountry.population} million ${myCountry.language} -speaking people, ${myCountry.neighbours} neighbouring countries 
-and a capital called ${myCountry.capital}.`)
+// console.log(`${myCountry.name} has ${myCountry.population} million ${myCountry.language} -speaking people, ${myCountry.neighbours} neighbouring countries 
+// and a capital called ${myCountry.capital}.`)
 
 myCountry.population += 2;
 myCountry["population"] -= 2;
 console.log(myCountry.population)
 
-const interestedIn = prompt("what do you want to know about my Country? Choose from name,capital,language,population,neighbour,province?")
+// const interestedIn = prompt("what do you want to know about my Country? Choose from name,capital,language,population,neighbour,province?")
 
-if(interestedIn[myCountry]){
-    console.log(interestedIn[myCountry])
-}else{
-    console.log('Wrong Request! Choose from name,capital,language,population,neighbour,province?')
-}
+// if(interestedIn[myCountry]){
+//     console.log(interestedIn[myCountry])
+// }else{
+//     console.log('Wrong Request! Choose from name,capital,language,population,neighbour,province?')
+// }
 
 myCountry.continent = "ASIA";
 myCountry["religion"] = "Islam";
-console.log(myCountry)
+console.log(myCountry.isIsland)
+console.log(myCountry.describe())
