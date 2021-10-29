@@ -233,7 +233,7 @@ john.calcBmi();
 
 console.log("mark.bmi", mark.bmi, "john.bmi", john.bmi);
 
-//For LOOPS
+//Iteration:For LOOPS
 for (let rep = 1; rep <= 10; rep++) {
   console.log(`this loops is REPEATING ${rep}`);
 }
@@ -245,7 +245,7 @@ const zainab = [
   2037 - 1999,
   "programmer",
   ["a", "b", "c"],
-  true,
+  true
 ];
 const types = [];
 for (let i = 0; i < zainab.length; i++) {
@@ -275,4 +275,14 @@ console.log("<---Only String---->");
 for (let i = 0; i < zainab.length; i++) {
   if (typeof zainab[i] !== "string") continue;
   console.log(zainab[i],typeof zainab[i])
+}
+
+//Looping Backwords 
+for (let i = zainab.length; i > 0  ; i--){
+  console.log(i, zainab[i])
+}
+
+//assignment
+for ( let i = 0 ; i<= 50; i++){
+  console.log(`'Voter number ${i} is currently voting`)
 }
