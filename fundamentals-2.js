@@ -232,3 +232,19 @@ mark.calcBmi();
 john.calcBmi();
 
 console.log("mark.bmi", mark.bmi, "john.bmi", john.bmi);
+
+//For LOOPS
+for (let rep = 1; rep <= 10; rep++) {
+  console.log(`this loops is REPEATING ${rep}`);
+}
+
+const zainab = ["zainab",false, "raza", 2037 - 1999, "programmer", ["a", "b", "c"], true];
+const types = []
+for ( let i=0;i<7;i++){
+  console.log(zainab[i],typeof zainab[i])
+
+  //filling types array
+  types.push(typeof zainab[i])
+  // types[i] = typeof zainab[i] 
+} 
+console.log(types)
