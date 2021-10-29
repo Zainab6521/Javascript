@@ -130,13 +130,13 @@ const age3 = findAge1(year[year.length - 1]); // for last element
 
 console.log("age1", age1, "age2", age2, "last", age3);
 
-const ages = [
-  findAge1(year[0]),
-  findAge1(year[1]),
-  findAge1(year[2]),
-  findAge1(year[year.length - 1]),
-];
-console.log(ages);
+// const ages = [
+//   findAge1(year[0]),
+//   findAge1(year[1]),
+//   findAge1(year[2]),
+//   findAge1(year[year.length - 1]),
+// ];
+// console.log(ages);
 
 //Exercise
 const friends = ["a", "b", "c", "d", "e"];
@@ -238,13 +238,41 @@ for (let rep = 1; rep <= 10; rep++) {
   console.log(`this loops is REPEATING ${rep}`);
 }
 
-const zainab = ["zainab",false, "raza", 2037 - 1999, "programmer", ["a", "b", "c"], true];
-const types = []
-for ( let i=0;i<7;i++){
-  console.log(zainab[i],typeof zainab[i])
+const zainab = [
+  "zainab",
+  false,
+  "raza",
+  2037 - 1999,
+  "programmer",
+  ["a", "b", "c"],
+  true,
+];
+const types = [];
+for (let i = 0; i < zainab.length; i++) {
+  console.log(zainab[i], typeof zainab[i]);
 
   //filling types array
-  types.push(typeof zainab[i])
-  // types[i] = typeof zainab[i] 
-} 
-console.log(types)
+  types.push(typeof zainab[i]);
+  // types[i] = typeof zainab[i]
+}
+console.log(types);
+
+//exercise
+const years = [1995, 1998, 1999, 2006];
+const ages = [];
+for (let i = 0; i < years.length; i++) {
+  ages.push(2037 - years[i]);
+}
+console.log(ages);
+
+//continue and break
+console.log("<---break at type number----->");
+for (let i = 0; i < zainab.length; i++) {
+  if (typeof zainab[i] === "number") break;
+  console.log(zainab[i] ,typeof zainab[i])
+}
+console.log("<---Only String---->");
+for (let i = 0; i < zainab.length; i++) {
+  if (typeof zainab[i] !== "string") continue;
+  console.log(zainab[i],typeof zainab[i])
+}
