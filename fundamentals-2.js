@@ -84,27 +84,27 @@ console.log(describePopulation("pakistan", 299.0));
 console.log(describePopulation("Singapore", 32.37));
 
 //coding challenge #1
-const calcAverage = (a, b, c) => {
-  return (a + b + c) / 3;
-};
-function checkWinner(avgDolphins, avgKoalas) {
-  if (avgDolphins >= 2 * avgKoalas) {
-    console.log(`Dolphins Wins (${avgDolphins} VS ${avgKoalas}) !!`);
-  } else if (avgKoalas >= 2 * avgDolphins) {
-    console.log(`Koalas Wins (${avgKoalas} VS ${avgDolphins}) !!`);
-  } else {
-    console.log("No One Win Today!!");
-  }
-}
+// const calcAverage = (a, b, c) => {
+//   return (a + b + c) / 3;
+// };
+// function checkWinner(avgDolphins, avgKoalas) {
+//   if (avgDolphins >= 2 * avgKoalas) {
+//     console.log(`Dolphins Wins (${avgDolphins} VS ${avgKoalas}) !!`);
+//   } else if (avgKoalas >= 2 * avgDolphins) {
+//     console.log(`Koalas Wins (${avgKoalas} VS ${avgDolphins}) !!`);
+//   } else {
+//     console.log("No One Win Today!!");
+//   }
+// }
 //DATA 1
 // const scoreDolphins = calcAverage(44,23,71);
 // const scoreKoalas = calcAverage(65,54,49);
 
 //DATA 2
-const scoreDolphins = calcAverage(85, 54, 41);
-const scoreKoalas = calcAverage(23, 34, 27);
+// const scoreDolphins = calcAverage(85, 54, 41);
+// const scoreKoalas = calcAverage(23, 34, 27);
 
-checkWinner(scoreDolphins, scoreKoalas);
+// checkWinner(scoreDolphins, scoreKoalas);
 ///ARRAY
 
 const countries = [
@@ -157,17 +157,17 @@ if (friends.includes("d")) {
 
 //coding challenge #2
 
-const bills = [144, 555, 44];
+// const bills = [144, 555, 44];
 
 const calcTip = (billvalue) => {
   return billvalue >= 50 && billvalue <= 300
     ? billvalue * 0.15
     : billvalue * 0.2;
 };
-const tip = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
-console.log(tip);
-const total = [bills[0] + tip[0], bills[0] + tip[0], bills[0] + tip[0]];
-console.log(total);
+// const tip = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
+// console.log(tip);
+// const total = [bills[0] + tip[0], bills[0] + tip[0], bills[0] + tip[0]];
+// console.log(total);
 
 //OBJECTS
 
@@ -245,7 +245,7 @@ const zainab = [
   2037 - 1999,
   "programmer",
   ["a", "b", "c"],
-  true
+  true,
 ];
 const types = [];
 for (let i = 0; i < zainab.length; i++) {
@@ -269,20 +269,68 @@ console.log(ages);
 console.log("<---break at type number----->");
 for (let i = 0; i < zainab.length; i++) {
   if (typeof zainab[i] === "number") break;
-  console.log(zainab[i] ,typeof zainab[i])
+  console.log(zainab[i], typeof zainab[i]);
 }
 console.log("<---Only String---->");
 for (let i = 0; i < zainab.length; i++) {
   if (typeof zainab[i] !== "string") continue;
-  console.log(zainab[i],typeof zainab[i])
+  console.log(zainab[i], typeof zainab[i]);
 }
 
-//Looping Backwords 
-for (let i = zainab.length; i > 0  ; i--){
-  console.log(i, zainab[i])
+//Looping Backwords
+for (let i = zainab.length; i > 0; i--) {
+  console.log(i, zainab[i]);
 }
 
 //assignment
-for ( let i = 0 ; i<= 50; i++){
-  console.log(`'Voter number ${i} is currently voting`)
+// for (let i = 0; i <= 50; i++) {
+//   console.log(`'Voter number ${i} is currently voting`);
+// }
+//While LOOP
+let rep = 1;
+// while (rep <= 10) {
+//   console.log(`WHILE: Lifting weights ${rep}`);
+//   rep++;
+// }
+
+//assignment
+const population = [1441, 299.0, 32.37, 45.98];
+var percentages2 = [];
+for (let i = 0; i < population.length; i++) {
+  percentages2.push(population[i] / 7990) * 100;
 }
+console.log(percentages2);
+
+//assignment
+const listOfNeighbours = [
+  ["Canada", "Mexico"],
+  ["Spain"],
+  ["Norway", "Sweden", "Russia"],
+];
+let value = [];
+let innerValue = [];
+for (let i = 0; i < listOfNeighbours.length; i++) {
+  for (let j = 0; j < listOfNeighbours[i].length; j++) {
+    console.log(listOfNeighbours[i][j]);
+  }
+}
+//coding challenge #4
+const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+const tips = [];
+const totals = [];
+
+for (let i = 0; i < bills.length; i++) {
+  const tip = calcTip(bills[i]);
+  tips.push(tip);
+  totals.push(bills[i] + tips[i]);
+}
+const calcAverage = (arr) => {
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    // sum = sum + arr[i];
+    sum += arr[i];
+  }
+  return sum / arr.length;
+};
+console.log("AVERAGE OF TOTALS:",calcAverage(totals));
+console.log(tips, totals);
