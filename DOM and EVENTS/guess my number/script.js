@@ -29,12 +29,17 @@ document.querySelector('.check').addEventListener('click', () => {
       highScore = score;
       document.querySelector('.highscore').textContent = highScore;
     }
-  }
-  if (guess !== secretNumber) {
-    document.querySelector('.message').textContent =
-      score > 1 ? 'Too high!' : 'Too low!';
-    score--;
-    document.querySelector('.score').textContent = score;
+  } else if (guess !== secretNumber) {
+    if (score > 1) {
+      document.querySelector('.message').textContent =
+        guess > secretNumber ? 'Too high!' : 'Too low!';
+      score--;
+      document.querySelector('.score').textContent = score;
+    } else {
+      document.querySelector('.message').textContent =
+        'You have lost the Game!';
+      document.querySelector('.score').textContent = 0;
+    }
   }
   //  else if (guess > secretNumber) {
   //   if (score > 1) {
