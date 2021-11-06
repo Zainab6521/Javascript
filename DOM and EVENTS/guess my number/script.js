@@ -22,9 +22,14 @@ document.querySelector('.check').addEventListener('click', () => {
   } else if (guess === number) {
     document.querySelector('.message').textContent = 'Correct Number!!';
   } else if (guess > number) {
-    document.querySelector('.message').textContent = 'Too high!';
-    score--;
-    document.querySelector('.score').textContent = score;
+    if (score > 0) {
+      document.querySelector('.message').textContent = 'Too high!';
+      score--;
+      document.querySelector('.score').textContent = score;
+    } else {
+      document.querySelector('.message').textContent =
+        'You have lost the Game!';
+    }
   } else if (guess < number) {
     score--;
     document.querySelector('.message').textContent = 'Too low!';
