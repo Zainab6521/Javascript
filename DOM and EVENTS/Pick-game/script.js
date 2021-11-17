@@ -22,6 +22,7 @@ diceEl.classList.add('hidden');
 const scores = [0, 0];
 let currentScore = 0;
 let activePlayer = 0;
+let playing = true;
 
 const switchPlayer = () => {
   document.getElementById(`current--${activePlayer}`).textContent = 0;
@@ -33,23 +34,25 @@ const switchPlayer = () => {
 
 //Rolling dice functionality
 btnRoll.addEventListener('click', () => {
-  //Generating a random dice roll
-  const dice = Math.trunc(Math.random() * 6) + 1;
-  console.log(dice);
-  //Display Dice
-  diceEl.classList.remove('hidden');
-  diceEl.src = `dice-${dice}.png`;
+  if (playing) {
+    //Generating a random dice roll
+    const dice = Math.trunc(Math.random() * 6) + 1;
+    console.log(dice);
+    //Display Dice
+    diceEl.classList.remove('hidden');
+    diceEl.src = `dice-${dice}.png`;
 
-  //check for rolled 1
-  if (dice !== 1) {
-    //Add dice to current score
-    currentScore += dice;
-    document.getElementById(`current--${activePlayer}`).textContent =
-      currentScore;
-    current0El.textContent = currentScore; //change later
-  } else {
-    //Switch to next player
-    switchPlayer();
+    //check for rolled 1
+    if (dice !== 1) {
+      //Add dice to current score
+      currentScore += dice;
+      document.getElementById(`current--${activePlayer}`).textContent =
+        currentScore;
+      current0El.textContent = currentScore; //change later
+    } else {
+      //Switch to next player
+      switchPlayer();
+    }
   }
 });
 
@@ -61,7 +64,17 @@ btnHold.addEventListener('click', () => {
   document.getElementById(`score--${activePlayer}`).textContent =
     scores[activePlayer];
   //Check if player score is >=100
-  //Finish the Game
-  //Switch to the next player
-  switchPlayer();
+  if (scores[activePlayer] >= 100) {
+    playing = false;
+    //Finish the Game
+    document
+      .querySelector(`.player--${activePlayer}`)
+      .classList.add('player--winner');
+    document
+      .querySelector(`.player--${activePlayer}`)
+      .classList.remove('player--active');
+  } else {
+    //Switch to the next player
+    switchPlayer();
+  }
 });
