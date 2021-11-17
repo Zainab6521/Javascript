@@ -48,7 +48,7 @@ btnRoll.addEventListener('click', () => {
       currentScore += dice;
       document.getElementById(`current--${activePlayer}`).textContent =
         currentScore;
-      current0El.textContent = currentScore; //change later
+      // current0El.textContent = currentScore; //change later
     } else {
       //Switch to next player
       switchPlayer();
@@ -67,6 +67,8 @@ btnHold.addEventListener('click', () => {
     //Check if player score is >=100
     if (scores[activePlayer] >= 100) {
       playing = false;
+      diceEl.classList.add('hidden');
+
       //Finish the Game
       document
         .querySelector(`.player--${activePlayer}`)
