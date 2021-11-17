@@ -57,24 +57,26 @@ btnRoll.addEventListener('click', () => {
 });
 
 btnHold.addEventListener('click', () => {
-  //ADD current Score to active player score.
-  scores[activePlayer] += currentScore;
-  // scores[1] = scores[1] + currentScore;
-  console.log(scores[activePlayer]);
-  document.getElementById(`score--${activePlayer}`).textContent =
-    scores[activePlayer];
-  //Check if player score is >=100
-  if (scores[activePlayer] >= 100) {
-    playing = false;
-    //Finish the Game
-    document
-      .querySelector(`.player--${activePlayer}`)
-      .classList.add('player--winner');
-    document
-      .querySelector(`.player--${activePlayer}`)
-      .classList.remove('player--active');
-  } else {
-    //Switch to the next player
-    switchPlayer();
+  if (playing) {
+    //ADD current Score to active player score.
+    scores[activePlayer] += currentScore;
+    // scores[1] = scores[1] + currentScore;
+    console.log(scores[activePlayer]);
+    document.getElementById(`score--${activePlayer}`).textContent =
+      scores[activePlayer];
+    //Check if player score is >=100
+    if (scores[activePlayer] >= 100) {
+      playing = false;
+      //Finish the Game
+      document
+        .querySelector(`.player--${activePlayer}`)
+        .classList.add('player--winner');
+      document
+        .querySelector(`.player--${activePlayer}`)
+        .classList.remove('player--active');
+    } else {
+      //Switch to the next player
+      switchPlayer();
+    }
   }
 });
